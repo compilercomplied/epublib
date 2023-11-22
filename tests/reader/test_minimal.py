@@ -21,3 +21,11 @@ def test_ok():
     assert texts[1] == MINIMAL_CHAPTER1
     assert texts[2] == MINIMAL_CHAPTER2
     assert texts[3] == MINIMAL_COPYRIGHT
+
+    contents = epubs[0].dump_contents()
+
+    expected_contents = (
+        MINIMAL_TOC + MINIMAL_CHAPTER1 + MINIMAL_CHAPTER2 + MINIMAL_COPYRIGHT
+    )
+
+    assert contents == expected_contents
