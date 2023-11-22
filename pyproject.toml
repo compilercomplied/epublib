@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "epublib"
+version = "0.1.0"
+description = ""
+authors = ["compilercomplied <git.gdario@gmail.com>"]
+readme = "README.md"
+
+[tool.pytest.ini_options]
+pythonpath = "epublib"
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+stream-unzip = "^0.0.88"
+lxml = "^4.9.3"
+lxml-stubs = "^0.4.0"
+html2text = "^2020.1.16"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff-lsp = "^0.0.45"
+ruff = "^0.1.6"
+pyright = "^1.1.336"
+black = "^23.11.0"
+pytest = "^7.4.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
